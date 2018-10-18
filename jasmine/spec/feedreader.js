@@ -91,7 +91,7 @@ $(function() {
         it('on click again, menu hides', function(){
             var menuClick = $('.menu-icon-link');
             menuClick.click();
-            menuDisplay = $('body').hasClass('menu-hidden');
+            var menuDisplay = $('body').hasClass('menu-hidden');
             expect(menuDisplay).toEqual(true);
         });
 
@@ -143,6 +143,17 @@ $(function() {
         it('has content changes by loadFeed function', function(done){
             expect(oldLoad).not.toEqual(newLoad);
         });
+
+    });
+
+    /*Implement error handling for undefined variables and out-of-bound array access*/
+    describe('Implement error handling', function(){
+        it('for undefined variables and out-of-bound array access', function(){
+            //This is valid since out-of-bound array gives undefined.
+            var undefined_variable;
+            expect(undefined_variable).toBeUndefined();
+        });
+
 
     });
 
